@@ -11,7 +11,7 @@ class Song < ActiveRecord::Base
     end
 
     def least_frequent_genre
-        self.all.min_by {|g| g.genre}.song
+        self.all.max_by {|g| g.genre}.song
     end
 
 end

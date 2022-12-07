@@ -1,5 +1,8 @@
 puts "Creating artists..."
 
+Artist.destroy_all
+Song.destroy_all
+Feature.destroy_all
 
 a1 = Artist.create(name: 'El Alfa', description: 'Emanuel Herrera Batista, known professionally as El Alfa El Jefe, or simply as El Alfa, is a Dominican rapper, known as "The King of Dembow". Batista was born in Bajos de Haina, Santo Domingo.', img_url: 'https://magazine-resources.tidal.com/uploads/2020/12/ElAlfa.jpg')
 a2 = Artist.create(name: 'Bad Bunny', description: 'Benito Antonio Martínez Ocasio, known professionally as Bad Bunny, is a Puerto Rican rapper and singer. His music is defined as Latin trap and reggaeton. He rose to popularity in 2016 with his song "Diles", which led to a deal with Hear This Music. ', img_url: 'https://upload.wikimedia.org/wikipedia/commons/b/b1/Bad_Bunny_2019_by_Glenn_Francis_%28cropped%29.jpg')
@@ -37,3 +40,13 @@ f7 = Feature.create(name: 'Mr Hudson', img_url: 'https://upload.wikimedia.org/wi
 f8 = Feature.create(name: nil, img_url: nil)
 f9 = Feature.create(name: nil, img_url: nil)
 f10 = Feature.create(name: 'Lil Durk', img_url: 'https://media.pitchfork.com/photos/62e6cd01f06d3dfc239e4a9a/1:1/w_1500,h_1500,c_limit/lil-durk-lollapalooza-2022.jpg', price: 350000)
+f1 = Feature.create(artist_name: 'CJ', img_url: 'https://2dopeboyz.com/wp-content/uploads/2021/03/french-montana-rowdy-rebel-cj-whoopty-nyc-remix.jpg', price: 8000, artist_id: Artist.first.id, song_id: Song.first.id)
+f2 = Feature.create(artist_name: nil, img_url: nil, price: nil, artist_id: nil, song_id: nil)
+f3 = Feature.create(artist_name: nil, img_url: nil, price: nil, artist_id: nil, song_id: nil)
+f4 = Feature.create(artist_name: 'Nav', img_url: 'https://www.billboard.com/wp-content/uploads/2020/04/nav-courtesy-of-nav-2020-billboard-1548-1587044491.jpg', price: 6000, artist_id: Artist.fourth.id, song_id: Song.fourth.id)
+f5 = Feature.create(artist_name: 'Chainsmokers', img_url: 'https://www.billboard.com/wp-content/uploads/2022/01/the-chainsmokers-las-vegas-2021-billboard-1548.jpg', price: 9000, artist_id: Artist.fifth.id, song_id: Song.fifth.id)
+f6 = Feature.create(artist_name: 'Billie Eilish', img_url: 'https://cdn.vox-cdn.com/thumbor/VetxE6rRTJt5tLhQ2Z99QFA9zcI=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/16127988/56973906_1031440620389086_5150401069125206016_o.jpg', price: 10000, artist_id: Artist.all[5].id, song_id: Song.all[5].id)
+f7 = Feature.create(artist_name: 'Mr Hudson', img_url: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Mr_Hudson_at_Lovebox_Weekender_2009_crop.jpg', price: 5000, artist_id: Artist.all[6].id, song_id: Song.all[6].id)
+f8 = Feature.create(artist_name: nil, img_url: nil, price: nil, artist_id: nil, song_id: nil)
+f9 = Feature.create(artist_name: nil, img_url: nil, price: nil, artist_id: nil, song_id: nil)
+f10 = Feature.create(artist_name: 'Lil Durk', img_url: 'https://media.pitchfork.com/photos/62e6cd01f06d3dfc239e4a9a/1:1/w_1500,h_1500,c_limit/lil-durk-lollapalooza-2022.jpg', price: 6040, artist_id: Artist.all[9].id, song_id: Song.all[9].id)
