@@ -30,16 +30,6 @@ s10 = Song.create(title: "Laugh Now Cry Later", genre: "Rap", img_url: "https://
 
 puts "Creating features..."
 
-f1 = Feature.create(name: 'CJ', img_url: 'https://2dopeboyz.com/wp-content/uploads/2021/03/french-montana-rowdy-rebel-cj-whoopty-nyc-remix.jpg', price: 25000)
-f2 = Feature.create(name: nil, img_url: nil )
-f3 = Feature.create(name: nil, img_url: nil)
-f4 = Feature.create(name: 'Nav', img_url: 'https://www.billboard.com/wp-content/uploads/2020/04/nav-courtesy-of-nav-2020-billboard-1548-1587044491.jpg', price: 100000)
-f5 = Feature.create(name: 'Chainsmokers', img_url: 'https://www.billboard.com/wp-content/uploads/2022/01/the-chainsmokers-las-vegas-2021-billboard-1548.jpg', price: 1000000)
-f6 = Feature.create(name: 'Billie Eilish', img_url: 'https://cdn.vox-cdn.com/thumbor/VetxE6rRTJt5tLhQ2Z99QFA9zcI=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/16127988/56973906_1031440620389086_5150401069125206016_o.jpg', price: 1000000)
-f7 = Feature.create(name: 'Mr Hudson', img_url: 'https://upload.wikimedia.org/wikipedia/commons/2/24/Mr_Hudson_at_Lovebox_Weekender_2009_crop.jpg', price: 20000)
-f8 = Feature.create(name: nil, img_url: nil)
-f9 = Feature.create(name: nil, img_url: nil)
-f10 = Feature.create(name: 'Lil Durk', img_url: 'https://media.pitchfork.com/photos/62e6cd01f06d3dfc239e4a9a/1:1/w_1500,h_1500,c_limit/lil-durk-lollapalooza-2022.jpg', price: 350000)
 f1 = Feature.create(artist_name: 'CJ', img_url: 'https://2dopeboyz.com/wp-content/uploads/2021/03/french-montana-rowdy-rebel-cj-whoopty-nyc-remix.jpg', price: 8000, artist_id: Artist.first.id, song_id: Song.first.id)
 f2 = Feature.create(artist_name: nil, img_url: nil, price: nil, artist_id: nil, song_id: nil)
 f3 = Feature.create(artist_name: nil, img_url: nil, price: nil, artist_id: nil, song_id: nil)

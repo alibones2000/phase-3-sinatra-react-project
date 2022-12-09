@@ -6,12 +6,17 @@ class Song < ActiveRecord::Base
         Song.all.order(:release_date)[0]
     end
 
-    def most_frequent_genre
-        self.all.max_by {|g| g.genre}.song
+    def self.most_frequent_genre
+        self.all.max_by {|g| g.genre}
     end
 
     def least_frequent_genre
-        self.all.max_by {|g| g.genre}.song
+        self.all.min_by {|g| g.genre}
     end
 
-end
+    def self.new_song(title, genre, release_date, img_url)
+        self.create(release_date: release_date, img_url: img_url)
+    end 
+        
+    end
+
