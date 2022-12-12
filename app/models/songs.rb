@@ -1,3 +1,5 @@
+
+
 class Song < ActiveRecord::Base
     has_many :features
     has_many :artists, through: :features
@@ -7,11 +9,14 @@ class Song < ActiveRecord::Base
     end
 
     def self.most_frequent_genre
-        self.all.max_by {|g| g.genre}
+        self.all.group_by {|g| g.genre}.max_by{|k,v| v.count}[0]
+
+      
     end
 
-    def least_frequent_genre
-        self.all.min_by {|g| g.genre}
+    def self.least_frequent_genre
+      self.all.group_by {|g| g.genre}.min_by{|k,v| v.count}[0]
+      
     end
 
     def self.new_song(title, genre, release_date, img_url)
